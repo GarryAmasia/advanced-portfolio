@@ -5,14 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced-portfolio</title>
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/fec710c91b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <section id="lading-page">
+    <section id="landing-page">
       <nav>
         <figure>
-          <img src="" alt="" />
+          <img id="personal-logo" src="./assets/garry-logo.png" alt="" />
         </figure>
         <ul class="nav__link--list">
           <li class="nav__link">
@@ -36,8 +46,27 @@
               >Contact</a
             >
           </li>
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              ><i class="fa-solid fa-moon"></i
+            ></a>
+          </li>
         </ul>
       </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">G'day ...</h1>
+          <h1 class="title green">I'm Garry</h1>
+          <p class="header__para">
+            I am <b class="green">Frontend Engineer</b>with a strong passion for
+            building web apps with great user experience.
+            <br />
+            Here is abit more <b class="green">about me</b>
+          </p>
+        </div>
+      </header>
     </section>
   </body>
 </html>
