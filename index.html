@@ -17,6 +17,15 @@
       src="https://kit.fontawesome.com/fec710c91b.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("9EM7Rf9bCTn2TCrIJ");
+      })();
+    </script>
   </head>
   <body>
     <section id="landing-page">
@@ -142,7 +151,38 @@
             </figure>
           </div>
         </div>
-        <div class="modal__half modal__contact">lets chat</div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">
+            Lets have a chat ..
+          </h3>
+          <h4 class="modal__sub-title modal__sub-title--contact">
+            I am currently open to new opportunities
+          </h4>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label for="name" class="form__label--item">Name</label>
+              <input type="text" class="input" name="user__name" />
+            </div>
+            <div class="form__item">
+              <label for="email" class="form__label--item">Email</label>
+              <input type="email" class="input" name="user__email" />
+            </div>
+            <div class="form__item">
+              <label for="message" class="form__label--item">Message</label>
+              <textarea name="message" id="" cols="30" rows="10"></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">
+              Shoot me a message..
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thank you for your message. Looking forwards to speak to you soon
+          </div>
+        </div>
+        <i class="fa-solid fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="projects">
