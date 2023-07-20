@@ -48,7 +48,7 @@
               >Project</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -72,7 +72,8 @@
             I am <b class="green">Frontend Engineer</b> with a strong passion
             for building web apps with great user experience.
             <br />
-            Here is abit more <b class="green">about me</b>
+            Here is abit more
+            <b class="green click" onclick="toggleModal()">about me</b>
           </p>
           <div class="social__list">
             <a
@@ -152,7 +153,10 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
-          <i class="fa-solid fa-times modal__exit click"></i>
+          <i
+            class="fa-solid fa-times modal__exit click"
+            onclick="toggleModal()"
+          ></i>
           <h3 class="modal__title modal__title--contact">
             Lets have a chat ..
           </h3>

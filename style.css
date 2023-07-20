@@ -121,6 +121,23 @@ i {
   background-color: #242424;
 }
 
+nav,
+.scroll,
+.header {
+  opacity: 1;
+  visibility: visible;
+  transition: all 300ms ease-in-out;
+  filter: blur(0);
+}
+
+.modal__open nav,
+.modal__open .scroll,
+.modal__open .header {
+  opacity: 0.6;
+  filter: blur(3px);
+  visibility: visible;
+  transition: all 300ms ease;
+}
 /* -----------------------LANDING PAGE------------------- */
 #landing-page {
   min-height: 100vh;
