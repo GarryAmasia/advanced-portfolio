@@ -4,23 +4,39 @@
 
 const contact = (e) => {
   e.preventDefault();
-  //   console.log("it worked");
-  //   emailjs
-  //     .sendForm(
-  //       "service_05kzrft",
-  //       "template_6ju90x3",
-  //       e.target,
-  //       "9EM7Rf9bCTn2TCrIJ"
-  //     )
-  //     .then(() => {
-  //       console.log("hey its working");
-  //     });
   const loading = document.querySelector(".modal__overlay--loading");
   const success = document.querySelector(".modal__overlay--success");
+  console.log("it worked");
   loading.classList += " modal__overlay--visible";
-  setTimeout(() => {
-    // console.log("it worked");
-    loading.classList.remove("modal__overlay--visible");
-    success.classList += " modal__overlay--visible";
-  }, 5000);
+  emailjs
+    .sendForm(
+      "service_05kzrft",
+      "template_6ju90x3",
+      e.target,
+      "9EM7Rf9bCTn2TCrIJ"
+    )
+    .then(() => {
+      //   throw new Error("hey this is error!!!!");
+      // console.log("hey its working");
+      loading.classList.remove("modal__overlay--visible");
+      success.classList += " modal__overlay--visible";
+    })
+    .catch((err) => {
+      loading.classList.remove("modal__overlay--visible");
+      alert(
+        "The email service is temporary unavailable..please try again later"
+      );
+    });
+};
+
+let isModalOpen = false;
+
+const toggleModal = () => {
+  //   if (isModalOpen) {
+  //     document.body.classList.remove("modal__open");
+  //   } else {
+  //     isModalOpen = false;
+  //     document.body.classList += " .modal__open";
+  //   }
+  document.body.classList.toggle("modal__open");
 };
