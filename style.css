@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
   /* color: rgb(73, 73, 73); */
+  scroll-behavior: smooth;
 }
 
 li {
@@ -12,6 +13,7 @@ li {
 
 section {
   background-color: rgb(255, 255, 255);
+  transition: all 300ms ease;
 }
 
 .container {
@@ -35,7 +37,7 @@ section {
 }
 
 .green {
-  color: #15abab;
+  color: #15abab !important;
 }
 
 input,
@@ -126,7 +128,7 @@ nav,
 .header {
   opacity: 1;
   visibility: visible;
-  transition: all 300ms ease-in-out;
+  transition: all 1000ms ease-in-out;
   filter: blur(0);
 }
 
@@ -137,6 +139,31 @@ nav,
   filter: blur(3px);
   visibility: visible;
   transition: all 300ms ease;
+}
+
+.dark-theme .title,
+.dark-theme .section__title,
+/* .dark-theme .section__sub-title, */
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-moon,
+.dark-theme .header__para {
+  color: white;
+}
+
+.dark-theme section {
+  background-color: #242424;
+}
+
+.dark-theme #personal-logo {
+  filter: brightness(0) invert(1);
+}
+
+.dark-theme .mail__button {
+  background-color: #15abab;
+}
+
+.dark-theme .scroll__icon {
+  border-color: white;
 }
 /* -----------------------LANDING PAGE------------------- */
 #landing-page {

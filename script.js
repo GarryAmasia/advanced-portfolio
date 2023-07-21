@@ -29,8 +29,6 @@ const contact = (e) => {
     });
 };
 
-let isModalOpen = false;
-
 const toggleModal = () => {
   //   if (isModalOpen) {
   //     document.body.classList.remove("modal__open");
@@ -39,4 +37,14 @@ const toggleModal = () => {
   //     document.body.classList += " .modal__open";
   //   }
   document.body.classList.toggle("modal__open");
+};
+
+let contrastToggle = false;
+const toggleContrast = () => {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+    document.body.classList += "dark-theme";
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
 };
