@@ -2,6 +2,25 @@
 // service_05kzrft
 // 9EM7Rf9bCTn2TCrIJ
 
+const scaleFactor = 1 / 20;
+
+const moveBackground = (e) => {
+  const shape = document.querySelectorAll(".shape");
+  const x = e.clientX * scaleFactor;
+  const y = e.clientY * scaleFactor;
+  //   console.log(x, y);
+
+  //   shape.forEach((item, index) => {
+  //     item[index].style.transform = `translate(10%,10%)`;
+  //   });
+  for (let i = 0; i < shape.length; i++) {
+    const isOdd = i % 2 !== 0;
+    // console.log(isOdd);
+    const boolInt = isOdd ? -1 : 1;
+    shape[i].style.transform = `translate(${x * boolInt}px,${y * boolInt}px)`;
+  }
+};
+
 const contact = (e) => {
   e.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
